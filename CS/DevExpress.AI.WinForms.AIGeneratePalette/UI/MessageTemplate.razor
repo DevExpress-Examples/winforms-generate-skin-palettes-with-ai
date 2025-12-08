@@ -1,0 +1,58 @@
+﻿@using DevExpress.AIIntegration.Blazor.Chat
+@using DevExpress.Blazor
+@using System.Net
+@using DevExpress.Blazor.Internal
+
+<div class="dxbl-chatui-message-attachments">
+    @foreach(var file in Message.Contexts) {
+        <div class="dxbl-chatui-message-attachment">
+            <DxImage CssClass="dxbl-chatui-message-attachment-icon" Source="@SvgSymbolSpriteSourceCreator.UcFile" />
+            <span class="dxbl-chatui-message-attachment-name">@file.Name</span>
+        </div>
+    }
+</div>
+<div class=@GetMessageClasses() role="article" aria-label="@($"Message from {Message.Role}")">
+    <div class="dxbl-chatui-message-text">@GetMessageTextContent()</div>
+    @if(Message.Role != ChatMessageRole.User) {
+        <div>
+            @if(Message.Typing) {
+                <DxWaitIndicator Visible="true"></DxWaitIndicator>
+            }
+        </div>
+    }
+    else {
+        <div class="dxbl-chatui-message-buttons-container">
+            <DxButton CssClass="dxbl-chat-message-button" IconCssClass="dxbl-chat-icon" Click="OnDeleteClick" RenderStyle="ButtonRenderStyle.Secondary" RenderStyleMode="ButtonRenderStyleMode.Text" title="Delete message">
+                <DxImage Source="@SvgSymbolSpriteSourceCreator.ScDelete"></DxImage>
+            </DxButton>
+        </div>
+    }
+</div>
+
+@code {
+    [Parameter]
+    public BlazorChatMessage Message { get; set; } = default!;
+
+    [Parameter]
+    public EventCallback<string> OnDeleteButtonClick { get; set; }
+
+    string GetMessageClasses() {
+        return DevExpress.Blazor.Internal.Utils.CombineCssClasses("dxbl-chatui-message", Message.Role switch {
+            ChatMessageRole.User => "dxbl-chatui-message-user",
+            ChatMessageRole.System => "dxbl-chatui-message-system",
+            ChatMessageRole.Assistant => "dxbl-chatui-message-assistant",
+            ChatMessageRole.Error => "dxbl-chatui-message-error",
+            _ => string.Empty
+        });
+    }
+
+    RenderFragment GetMessageTextContent() {
+        return @<text>@Message.Content</text>;
+    }
+
+    Task OnDeleteClick() {
+        if(OnDeleteButtonClick.HasDelegate)
+            return OnDeleteButtonClick.InvokeAsync(Message.Content);
+        return Task.CompletedTask;
+    }
+}

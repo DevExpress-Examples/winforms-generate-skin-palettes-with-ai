@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_4" data-name="Layer 4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <defs>
+    <style>
+      .Red {
+        fill: #d11c1c;
+      }
+
+      .Green {
+        fill: #039c23;
+      }
+
+      .Black {
+        fill: #727272;
+      }
+
+      .Blue {
+        fill: #1177d7;
+      }
+
+      .Yellow {
+        fill: #ffb115;
+      }
+
+      .cls-1 {
+        opacity: .5;
+      }
+    </style>
+  </defs>
+  <g class="cls-1">
+    <path class="Black" d="M13.5,30v-10.98l-8.19,6.37-.61-.79,8.51-6.62L2.68,9.39l.63-.77,10.25,8.39.94-14.03,1,.07-.93,13.97,12.15-8.41.57.82-12.13,8.4,12.98,3.71-.27.96-13.36-3.82v11.34h-1Z"/>
+  </g>
+  <circle class="Blue" cx="14" cy="18" r="6"/>
+  <circle class="Blue" cx="27" cy="9" r="3"/>
+  <circle class="Blue" cx="5" cy="25" r="3"/>
+  <circle class="Red" cx="28" cy="22" r="4"/>
+  <circle class="Blue" cx="14" cy="30" r="2"/>
+  <circle class="Yellow" cx="3" cy="9" r="3"/>
+  <circle class="Green" cx="15" cy="3" r="3"/>
+</svg>
