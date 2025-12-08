@@ -27,12 +27,14 @@ This example leverages AI to create custom SVG skin palettes to personalize an a
 - Click the **AI Generate Palette** button in the Ribbon UI to invoke the AI-powered palette editor.
 - Generate a color palette based on your preferences and click **Save**.
 
+![Generate Skin Palettes with AI - DevExpress WinForms UI Library](generate-skin-pelettes-with-ai.gif)
+
 > [!Tip]
 > **Prompt Examples**
 > ```
-> Generate a warm autumn palette
-> Make a high-contrast accessibility-friendly palette
-> Create a modern flat pastel palette
+> - Generate a warm autumn palette
+> - Make a high-contrast accessibility-friendly palette
+> - Create a modern flat pastel palette
 > ```
  
 ## Project Structure
