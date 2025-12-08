@@ -27,10 +27,12 @@ This example leverages AI to create custom SVG skin palettes to personalize an a
 - Generate a color palette based on your preferences and click **Save**.
 
 > [!Tip]
-> Prompt Examples
-> - Generate a warm autumn palette
-> - Make a high-contrast accessibility-friendly palette
-> - Create a modern flat pastel palette
+> **Prompt Examples**
+> ```
+> Generate a warm autumn palette
+> Make a high-contrast accessibility-friendly palette
+> Create a modern flat pastel palette
+> ```
  
 ## Project Structure
 
@@ -79,7 +81,7 @@ DevExpress.AI.WinForms.AIGeneratePalette.Demo
 
 This example uses rate-limited AI services. You may experience performance-related delays. To remove artificial limits, connect to your own AI service or model.
 
-Open _ChatClientFactory.cs_ and provide your credentials:
+Open [ChatClientFactory.cs](./CS/DevExpress.AI.WinForms.AIGeneratePalette.Demo/AI/ChatClientFactory.cs) and provide your credentials:
 
 ```csharp
 static Uri AzureOpenAIEndpoint {
