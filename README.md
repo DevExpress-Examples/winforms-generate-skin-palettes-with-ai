@@ -188,9 +188,9 @@ void gptCheckItem_CheckedChanged(object sender, ItemClickEventArgs e) {
 
 ## Documentation
 
-- [Register AI Clients in WinForms Apps](https://docs.devexpress.com/WindowsForms/405151/ai-powered-extensions?v=25.2#register-ai-clients)
-- [WinForms AI Chat Control](https://docs.devexpress.com/WindowsForms/405218/ai-powered-extensions/ai-chat-control?v=25.2)
-- [Skin Palettes](https://docs.devexpress.com/WindowsForms/2399/build-an-application/skins?v=25.2&p=netframework#skin-palettes)
+- [Register AI Clients in WinForms Apps](https://docs.devexpress.com/WindowsForms/405151/ai-powered-extensions#register-ai-clients)
+- [WinForms AI Chat Control](https://docs.devexpress.com/WindowsForms/405218/ai-powered-extensions/ai-chat-control)
+- [Skin Palettes](https://docs.devexpress.com/WindowsForms/2399/build-an-application/skins#skin-palettes)
 <!-- feedback -->
 ## Does this example address your development requirements/objectives?
 
