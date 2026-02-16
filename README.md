@@ -192,7 +192,7 @@ void gptCheckItem_CheckedChanged(object sender, ItemClickEventArgs e) {
 - [WinForms AI Chat Control](https://docs.devexpress.com/WindowsForms/405218/ai-powered-extensions/ai-chat-control)
 - [Skin Palettes](https://docs.devexpress.com/WindowsForms/2399/build-an-application/skins#skin-palettes)
 <!-- feedback -->
-## Does this example address your development requirements/objectives?
+## Does This Example Address Your Development Requirements/Objectives?
 
 [<img src="https://www.devexpress.com/support/examples/i/yes-button.svg"/>](https://www.devexpress.com/support/examples/survey.xml?utm_source=github&utm_campaign=winforms-generate-skin-palettes-with-ai&~~~was_helpful=yes) [<img src="https://www.devexpress.com/support/examples/i/no-button.svg"/>](https://www.devexpress.com/support/examples/survey.xml?utm_source=github&utm_campaign=winforms-generate-skin-palettes-with-ai&~~~was_helpful=no)
 
