@@ -9,10 +9,10 @@
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Azure.AI.OpenAI" Version="2.2.0-beta.5" />
-    <PackageReference Include="Microsoft.Extensions.AI" Version="9.7.1" />
+    <PackageReference Include="Microsoft.Extensions.AI" Version="10.5.1" />
     <PackageReference Include="Microsoft.Extensions.AI.OpenAI" Version="9.7.1-preview.1.25365.4" />
-    <PackageReference Include="DevExpress.Win.Design" Version="25.2.1-*" />
-    <PackageReference Include="DevExpress.AIIntegration.WinForms.Chat" Version="25.2.1-*" />
+    <PackageReference Include="DevExpress.Win.Design" Version="26.1.2-beta" />
+    <PackageReference Include="DevExpress.AIIntegration.WinForms.Chat" Version="26.1.2-beta" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="GeneratePaletteExtension\GeneratePaletteInstruction.md" />

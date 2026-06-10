@@ -91,7 +91,7 @@ static Uri AzureOpenAIEndpoint {
     get {
         string azureOpenAIEndpoint = GetEnvironmentVariable("AZURE_OPENAI_ENDPOINT", IsDeveloperMode);
         if(string.IsNullOrEmpty(azureOpenAIEndpoint))
-            azureOpenAIEndpoint = "https://public-api.devexpress.com/demo-openai"; // DevExpress proxy-server
+            azureOpenAIEndpoint = "https://api.devexpress.com/demo-openai"; // DevExpress proxy-server
         return new Uri(azureOpenAIEndpoint);
     }
 }

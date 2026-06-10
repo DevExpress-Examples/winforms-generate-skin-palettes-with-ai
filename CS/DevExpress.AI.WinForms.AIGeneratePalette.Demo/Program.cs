@@ -19,7 +19,7 @@ namespace DevExpress.AI.WinForms.AIGeneratePalette.Demo {
             Application.SetCompatibleTextRenderingDefault(false);
 
             // Create a chat client (the model name can vary).
-            IChatClient chatClient = ChatClientFactory.Create("gpt-4.1");
+            IChatClient chatClient = ChatClientFactory.Create("demo");
 
             // Register the chat client and the palette generation extension in the DevExpress AI container.
             var defaultContainer = AIExtensionsContainerDesktop.Default;
