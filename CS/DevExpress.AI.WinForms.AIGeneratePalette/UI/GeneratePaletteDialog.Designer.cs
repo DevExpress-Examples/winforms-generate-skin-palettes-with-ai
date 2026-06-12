@@ -154,7 +154,7 @@
             aiChatControl1.Name = "aiChatControl1";
             aiChatControl1.Size = new System.Drawing.Size(449, 814);
             aiChatControl1.TabIndex = 8;
-            aiChatControl1.MessageSent += aiChatControl1_MessageSent;
+            aiChatControl1.MessageSending += aiChatControl1_MessageSending;
             // 
             // svgPalettePreview
             // 

@@ -116,7 +116,7 @@ namespace DevExpress.AI.WinForms.AIGeneratePalette.UI {
             svgPalettePreview.Refresh();
         }
 
-        async void aiChatControl1_MessageSent(object sender, DevExpress.AIIntegration.Blazor.Chat.WebView.AIChatControlMessageSentEventArgs e) {
+        async void aiChatControl1_MessageSending(object sender, DevExpress.AIIntegration.Blazor.Chat.WebView.AIChatControlMessageSendingEventArgs e) {
             var viewModel = mvvmContext1.GetViewModel<GeneratePaletteUIViewModel>();
             viewModel.InputPrompt = e.Content;
             IEnumerable<BlazorChatMessage> saveMessages = aiChatControl1.SaveMessages();
@@ -130,9 +130,9 @@ namespace DevExpress.AI.WinForms.AIGeneratePalette.UI {
 
             var response = viewModel.Current?.Response;
             if(response?.IsValid == true)
-                await aiChatControl1.SendMessage(response.Explanation, ChatRole.Assistant);
+                await aiChatControl1.AppendMessageAsync(response.Explanation, ChatRole.Assistant);
             else
-                await aiChatControl1.SendMessage("Failed to generate a valid palette.", ChatRole.Assistant);
+                await aiChatControl1.AppendMessageAsync("Failed to generate a valid palette.", ChatRole.Assistant);
         }
 
         /// <summary>
