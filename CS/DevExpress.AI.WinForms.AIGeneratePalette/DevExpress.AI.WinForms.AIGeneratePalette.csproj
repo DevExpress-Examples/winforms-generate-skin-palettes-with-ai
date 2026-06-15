@@ -13,6 +13,7 @@
     <PackageReference Include="Microsoft.Extensions.AI.OpenAI" Version="9.7.1-preview.1.25365.4" />
     <PackageReference Include="DevExpress.Win.Design" Version="26.1.2-beta" />
     <PackageReference Include="DevExpress.AIIntegration.WinForms.Chat" Version="26.1.2-beta" />
+	<PackageReference Include="DevExpress.Images.Blazor" Version="26.1.2-beta" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="GeneratePaletteExtension\GeneratePaletteInstruction.md" />

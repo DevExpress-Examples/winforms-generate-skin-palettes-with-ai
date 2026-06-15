@@ -2,11 +2,12 @@
 @using DevExpress.Blazor
 @using System.Net
 @using DevExpress.Blazor.Internal
+@using DevExpress.Images.Blazor
 
 <div class="dxbl-chatui-message-attachments">
     @foreach(var file in Message.Contexts) {
         <div class="dxbl-chatui-message-attachment">
-            <DxImage CssClass="dxbl-chatui-message-attachment-icon" Source="@SvgSymbolSpriteSourceCreator.UcFile" />
+            <DxButton IconCssClass="dxbl-chatui-message-attachment-icon" IconUrl="@DxIcon.Document" RenderStyle="ButtonRenderStyle.None" inert />
             <span class="dxbl-chatui-message-attachment-name">@file.Name</span>
         </div>
     }
@@ -22,9 +23,7 @@
     }
     else {
         <div class="dxbl-chatui-message-buttons-container">
-            <DxButton CssClass="dxbl-chat-message-button" IconCssClass="dxbl-chat-icon" Click="OnDeleteClick" RenderStyle="ButtonRenderStyle.Secondary" RenderStyleMode="ButtonRenderStyleMode.Text" title="Delete message">
-                <DxImage Source="@SvgSymbolSpriteSourceCreator.ScDelete"></DxImage>
-            </DxButton>
+            <DxButton CssClass="dxbl-chat-message-button" IconCssClass="dxbl-chat-icon" IconUrl="@DxIcon.Delete" Click="OnDeleteClick" RenderStyle="ButtonRenderStyle.Secondary" RenderStyleMode="ButtonRenderStyleMode.Text" title="Delete message" />
         </div>
     }
 </div>
