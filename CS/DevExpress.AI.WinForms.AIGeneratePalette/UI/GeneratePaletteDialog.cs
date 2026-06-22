@@ -44,7 +44,7 @@ namespace DevExpress.AI.WinForms.AIGeneratePalette.UI {
             fluent.SetTrigger(x => x.IsGenerating, OnIsGeneratingChanged);
 
             // Customize the message template to display the Delete button within messages.
-            aiChatControl1.SetMessageTemplate(message => builder => {
+            aiChatControl1.SetMessageContentTemplate(message => builder => {
                 builder.OpenComponent<MessageTemplate>(0);
                 builder.AddAttribute(1, nameof(MessageTemplate.Message), message);
                 builder.AddAttribute(2, nameof(MessageTemplate.OnDeleteButtonClick), EventCallback.Factory.Create<string>(this, OnDeleteMessageClick));
