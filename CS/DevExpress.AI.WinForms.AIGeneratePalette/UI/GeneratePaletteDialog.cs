@@ -77,7 +77,7 @@ namespace DevExpress.AI.WinForms.AIGeneratePalette.UI {
             viewModel.DeleteMessage(messageContent);
             IEnumerable<BlazorChatMessage> saveMessages = aiChatControl1.SaveMessages();
             List<BlazorChatMessage> list = saveMessages.ToList();
-            int index = list.FindIndex(x => x.Content == messageContent);
+            int index = list.FindIndex(x => x.Text == messageContent);
             for(int i = list.Count - 1; i >= index; i--)
                 list.RemoveAt(i);
             aiChatControl1.LoadMessages(list);
@@ -118,14 +118,8 @@ namespace DevExpress.AI.WinForms.AIGeneratePalette.UI {
 
         async void aiChatControl1_MessageSending(object sender, DevExpress.AIIntegration.Blazor.Chat.WebView.AIChatControlMessageSendingEventArgs e) {
             var viewModel = mvvmContext1.GetViewModel<GeneratePaletteUIViewModel>();
-            viewModel.InputPrompt = e.Content;
-            IEnumerable<BlazorChatMessage> saveMessages = aiChatControl1.SaveMessages();
-            List<BlazorChatMessage> list = saveMessages.ToList();
-            BlazorChatMessage lastOrDefault = list.LastOrDefault();
-            if(lastOrDefault == null || !lastOrDefault.Typing)
-                list.Add(new BlazorChatMessage(ChatRole.Assistant, string.Empty) { Typing = true });
+            viewModel.InputPrompt = e.Text;
 
-            aiChatControl1.LoadMessages(list);
             await viewModel.Generate();
 
             var response = viewModel.Current?.Response;

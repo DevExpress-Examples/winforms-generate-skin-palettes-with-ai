@@ -8,11 +8,11 @@
     }
 </style>
 
-@Message.Content
+@Message.Text
 
 @if (Message.Role == ChatMessageRole.User) {
     <div class="example-message-buttons-container">
-        <DxButton Click="OnDeleteClick" IconUrl="@DxIcon.Delete" RenderStyleMode="ButtonRenderStyleMode.Text" />
+        <DxButton Click="OnDeleteClick" IconUrl="@Icon.Delete" RenderStyleMode="ButtonRenderStyleMode.Text" />
     </div>
 }
 
@@ -23,5 +23,5 @@
     [Parameter]
     public EventCallback<string> OnDeleteButtonClick { get; set; }
 
-    Task OnDeleteClick() => OnDeleteButtonClick.InvokeAsync(Message.Content);
+    Task OnDeleteClick() => OnDeleteButtonClick.InvokeAsync(Message.Text);
 }
