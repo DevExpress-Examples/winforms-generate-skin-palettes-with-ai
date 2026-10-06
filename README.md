@@ -4,7 +4,7 @@
 [![](https://img.shields.io/badge/📖_How_to_use_DevExpress_Examples-e9f6fc?style=flat-square)](https://docs.devexpress.com/GeneralInformation/403183)
 [![](https://img.shields.io/badge/💬_Leave_Feedback-feecdd?style=flat-square)](#does-this-example-address-your-development-requirementsobjectives)
 <!-- default badges end -->
-# Generate WinForms SVG Skin Palettes with AI
+# WinForms - Generate SVG Skin Palettes with AI
 
 This example leverages AI to create custom SVG skin palettes to personalize an application's appearance on the fly. Users can generate, save, and delete AI-created palettes between application sessions. Additional features include:
 
@@ -17,8 +17,8 @@ This example leverages AI to create custom SVG skin palettes to personalize an a
 
 ## Prerequisites
 
-- .NET 8+ SDK
-- Visual Studio 2022, JetBrains Rider
+- .NET SDK
+- Visual Studio, JetBrains Rider
 
 ## Get Started
 
