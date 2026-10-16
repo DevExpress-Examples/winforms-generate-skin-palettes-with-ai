@@ -1,4 +1,5 @@
-﻿using DevExpress.XtraEditors;
+using System.ComponentModel;
+using DevExpress.XtraEditors;
 using DevExpress.XtraGrid;
 using DevExpress.AI.WinForms.AIGeneratePalette.Demo.Infrastructure;
 
@@ -11,6 +12,8 @@ namespace DevExpress.AI.WinForms.AIGeneratePalette.Demo.Views {
             DataService = dataService;
             customerBindingSource.DataSource = dataService.GetCustomers();
         }
+        [Browsable(false)]
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public ICommonDataService DataService { get; set; }
 
         void barButtonItem1_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e) {
